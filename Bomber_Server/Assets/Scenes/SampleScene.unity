@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &522068271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522068272}
+  - component: {fileID: 522068273}
+  m_Layer: 0
+  m_Name: BombController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &522068272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522068271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.96583, y: 1.5582674, z: 1.0625525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522068273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522068271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b211e1cf85eccc149aed57bd6c968a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 3392760991796670946, guid: 986d08a7018ab5346807b43d6483b88d, type: 3}
+  newBombs: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 4938052700389746432, guid: 4c532f9d5b1e61c42a27b3248fecc000, type: 3}
-  coinAmount: 64
+  coinAmount: 32
 --- !u!4 &1596584900
 Transform:
   m_ObjectHideFlags: 0
@@ -377,6 +422,7 @@ MonoBehaviour:
   server: {fileID: 1926312565}
   playerControllerPrefab: {fileID: 6816714019953783188, guid: e697a58d01660444c85ad203bc4d79d5, type: 3}
   coinController: {fileID: 1596584899}
+  bombController: {fileID: 522068273}
   spawnArea:
     size: {x: 8, y: 8}
 --- !u!114 &1926312565
@@ -393,6 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverController: {fileID: 1926312564}
   coinController: {fileID: 1596584899}
+  bombController: {fileID: 522068273}
 --- !u!4 &1926312566
 Transform:
   m_ObjectHideFlags: 0
